@@ -1,0 +1,26 @@
+.button{
+   margin: 1rem 0 1rem 1rem;
+   padding: 0.5rem;
+   justify-content: center;
+   background-color: #CC9966;
+   color: black;
+   border: none;
+   border-radius: 2rem;
+   font-weight: 600;
+   width: 100px;
+   display: flex;
+   gap: 0.5rem;
+   .text{
+      display: flex;
+      align-items: center;
+   }
+   .arrow{
+      display: flex;
+      align-items: center;
+      height: 15px;
+      width: 15px;
+   }
+   &:hover{
+      background-color: #c08f5f;
+   }
+}
