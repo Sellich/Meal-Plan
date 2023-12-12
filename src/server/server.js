@@ -2,7 +2,7 @@ const http = require('http');
 
 /*const OpenAI = require ('openai');
 
-const openai = new OpenAI({apiKey: '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'});
+const openai = new OpenAI({apiKey: ''});
 
 async function main() {
   const completion = await openai.chat.completions.create({
