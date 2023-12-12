@@ -1,16 +1,26 @@
-import React from 'react'
-import c from "./Recipe.module.scss"
+import React from 'react';
+import c from "./Recipe.module.scss";
 
+export type IIngredient = {
+  food: string,
+  foodCategory: string,
+  foodId: string,
+  image: string,
+  measure: string,
+  quantity: number,
+  text: string,
+  weight: number,
+};
 interface IRecipe {
-   ingredients: any
-}
+  ingredients: IIngredient[];
+};
 
-const Recipe: React.FC<IRecipe> = ({ingredients}) => {
+const Recipe: React.FC<IRecipe> = ({ ingredients }) => {
   return (
     <div className={c.recipe}>
-       {ingredients.map((el: any, index: number) => <p key={index}>{el.text}</p>)}
+      {ingredients.map((el: IIngredient, index: number) => <p key={index}>{el.text}</p>)}
     </div>
   )
-}
+};
 
-export default Recipe
+export default Recipe;

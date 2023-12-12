@@ -1,23 +1,22 @@
 type Calculator = {
-   calories: number;
-}
+  calories: number;
+};
 interface IState {
-   calculator: Calculator
-}
+  calculator: Calculator
+};
 
 export const selectCalories = (state: IState) => {
-   return state.calculator.calories
-}
-
+  return state.calculator.calories;
+};
 
 export const selectMealPlan = (state: any) => {
-   return state.nutrition[0].mealPlan
-}
+  return state.nutrition[0].mealPlan;
+};
 
 export const selectSucces = (state: any) => {
-   return state.nutrition[0].succes
-}
+  return state.nutrition[0].succes;
+};
 
 export const selectOpenMenu = (state: any) => {
-   return state.menu.openMenu
-}
+  return state.menu.openMenu;
+};

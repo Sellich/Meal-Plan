@@ -1,13 +1,13 @@
-import c from "./FormText.module.scss"
+import c from "./FormText.module.scss";
 
 interface IFormText {
-   label: string;
-}
+  label: string;
+};
 
-const FormText: React.FC<IFormText> = ({label}) => {
+const FormText: React.FC<IFormText> = ({ label }) => {
   return (
-   <label className={c.label}> {label} </label>
+    <label className={c.label}> {label} </label>
   )
-}
+};
 
-export default FormText
+export default FormText;

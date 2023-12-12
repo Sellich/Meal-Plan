@@ -1,13 +1,13 @@
-.wrapper{
-   display: grid;
-   grid-template-areas: 'l r';
-   grid-template-columns: 1fr 5fr;
-   margin: 1rem 0;
-   gap: 1rem;
-   .left{
-      grid-area: l;
-   }
-   .right{
-      grid-area: r;
-   }
+.wrapper {
+  display: grid;
+  grid-template-areas: "l r";
+  grid-template-columns: 1fr 5fr;
+  margin: 1rem 0;
+  gap: 1rem;
+  .left {
+    grid-area: l;
+  }
+  .right {
+    grid-area: r;
+  }
 }

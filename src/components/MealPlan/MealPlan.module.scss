@@ -1,24 +1,24 @@
-.wrapper{
-   width: 800px;
-   height: 800px;
-      display: flex;
-      flex-direction: column;
-.recipe_wrapper{
-   pointer-events: auto;
-   display: flex;
-   width: 100vw;
-   background:rgba(0,0,0,0.8);
-   position: fixed;
-   height: 100vh;
-   top:0;
-   left:0;
-   .recipe{
+.wrapper {
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  .recipe_wrapper {
+    pointer-events: auto;
+    display: flex;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    .recipe {
       position: absolute;
       top: 50%;
       left: 50%;
-      background:rgba(0,0,0,0.1); 
+      background: rgba(0, 0, 0, 0.1);
       pointer-events: none;
       z-index: 100;
-     }
-}
+    }
+  }
 }

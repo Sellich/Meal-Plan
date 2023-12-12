@@ -1,27 +1,27 @@
-.wrapper{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   padding: 0.5rem 0;
-   .controller{
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem 0;
+  .controller {
+    display: flex;
+    justify-content: space-between;
+    .label {
       display: flex;
-      justify-content: space-between;
-      .label{
-         display: flex;
-         align-items: center;
-         padding: 0 1rem 0 0;
-      }
-      .select{
-         width: 300px;
-      }
-   }
-   .error{
-      display: flex;
+      align-items: center;
+      padding: 0 1rem 0 0;
+    }
+    .select {
+      width: 300px;
+    }
+  }
+  .error {
+    display: flex;
     justify-content: end;
     color: red;
     font-weight: 400;
     font-size: 14px;
     font-family: "Courier New", Courier, monospace;
     margin: 0.5rem 0 0 0;
-   }
+  }
 }

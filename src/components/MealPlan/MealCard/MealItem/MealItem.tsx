@@ -1,15 +1,14 @@
-import React from 'react'
-import ImgPreloader from '../../../helper/MealPlanPreloader/ImgPreloader/ImgPreloader';
-import c from "./MealItem.module.scss"
+import React from 'react';
+import c from "./MealItem.module.scss";
 import MealItemRight from './MealItemRight/MealItemRight';
 
 interface IMealItem {
-   title: any;
-   img: any;
-   onClick: (data: any) => void;
-   meal: any;
+   title: string;
+   img: string;
+   onClick: (data: any) => void; // большой объект из результатов запроса к API
+   meal: any; // большой объект из результатов запроса к API
    day: string;
-}
+};
 
 const MealItem:React.FC<IMealItem> = ({title, img, onClick, meal, day}) => {
   return (
@@ -30,6 +29,6 @@ const MealItem:React.FC<IMealItem> = ({title, img, onClick, meal, day}) => {
        </div>
     </div>
   )
-}
+};
 
-export default MealItem
+export default MealItem;

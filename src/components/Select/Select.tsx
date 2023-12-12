@@ -1,53 +1,57 @@
-import React from 'react'
-import c from "./Select.module.scss"
+import React from 'react';
+import c from "./Select.module.scss";
 import Selected from 'react-select';
 import makeAnimated from 'react-select/animated';
-import { Controller } from 'react-hook-form';
+import { Control, Controller } from 'react-hook-form';
 import FormText from '../FormText/FormText';
-
+import { FormValues } from '../Calсulator/CalculatorForm/Form';
 
 const animatedComponents = makeAnimated();
+
 interface ISelect {
-   name: string;
-   values: any;
-   register: any;
-   error: string;
-   label: string;
-   multiple: boolean;
-   control: any;
-}
+  name: 'sex' | 'activity';
+  values: ValuesType[];
+  error: string | undefined;
+  label: string;
+  control: Control<FormValues>;
+  placeholder: string;
+};
 
-const Select: React.FC<ISelect> = ({name, values, error, label, control}) => {
+export type ValuesType = {
+  label: string;
+  value: number;
+};
 
-
-   const options = values.map((el: any) => ({
-      label: el.label,
-      value: el.value,
-    }));
+const Select: React.FC<ISelect> = ({ name, values, error, label, control, placeholder }) => {
+  const options = values.map((el: ValuesType) => ({
+    label: el.label,
+    value: el.value,
+  }));
 
   return (
     <div className={c.wrapper}>
-    <div className={c.controller}>
-       <FormText label={label}/>
-      <Controller 
-         name={name} 
-         control={control}
-         render={({field: {value, onChange, onBlur}}) => {
+      <div className={c.controller}>
+        <FormText label={label} />
+        <Controller
+          name={name}
+          control={control}
+          render={({ field: { value, onChange, onBlur } }) => {
             return <Selected
-            closeMenuOnSelect={true}
-            components={animatedComponents}
-            defaultValue={''}
-            onBlur={onBlur}
-            options={options}
-            value={options.find((c: any) => c.value === value)}
-            onChange={(val: any) => onChange(val.value)}
-            className={c.select}
-          />
-         }}/>
-         </div>
-         {error && <div className={c.error}> {error} </div>}
+              closeMenuOnSelect={true}
+              components={animatedComponents}
+              defaultValue=''
+              onBlur={onBlur}
+              options={options}
+              value={options.find((c: ValuesType) => c.value === value)}
+              onChange={(val) => onChange((val as ValuesType).value)}
+              className={c.select}
+              placeholder={placeholder}
+            />
+          }} />
+      </div>
+      {error && <div className={c.error}> {error} </div>}
     </div>
   )
-}
+};
 
-export default Select
+export default Select;
